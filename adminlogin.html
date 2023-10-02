@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-mX23fhSFHO8tWgQPJnM2tS1Y9GYUzMSHdy0n5teWZkW9xNqUC8A0nB5RvkmIP6dYErL3vCdSGIe5rCfuZRfXD4A==" crossorigin="anonymous" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="MFrame">
+        <form id="login-form">
+            <input placeholder="Username" type="text"/>
+            <input placeholder="Password" type="password"/>
+            <div class="forgotpass">
+                <div>
+                    <input type="checkbox">
+                    Remeber me
+                </div>
+                <span  id="forgotpass">Forgot Password</span>
+            </div>
+            <div>
+                <button id="login-button" class="btn_default" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+
+
+<!-- modal forgot passwrod email brithdate -->
+<div id="main_modal" class="login_modal">
+  <div class="login_modal_overlay"></div>
+  <div class="login_modal_content">
+
+    <div id="content" class="login_modal_content_1">
+      <div class="modal_close">
+        <i id="close" class='bx bx-x bx-lg close'></i>
+      </div>
+      <h3>Forgot Password</h3>
+    <div class="login_modal_contet1">
+     <div class="flex_col">
+      <span>Enter your Email Address</span>
+      <input type="email"  />
+     </div>
+     <div class="flex_col">
+      <span>Enter your Birth Date</span>
+      <input type="date"  />
+     </div>
+      <button class="btn_default" onclick="submitEmail()" >Submit</button>
+    </div>
+    </div>
+
+  </div>
+</div>
+<!-- modal forgot passwrod email brithdate -->
+
+
+
+<!-- modal otp -->
+<div id="modal_otp" class="login_modal modal_otp">
+  <div class="login_modal_overlay"></div>
+  <div class="login_modal_content">
+    <div id="content2" class="login_modal_content_1">
+      <div class="modal_close">
+        <i id="close" class='bx bx-x bx-lg close'></i>
+      </div>
+    <div class="login_modal_contet1 otp_contet">
+     
+<div class="bx-mail-send_1">
+  <i class='bx bx-mail-send '></i>
+  <div>Check your Email Addres</div>
+</div>
+     <div class="flex_col1">
+      <form id="otp-form">
+        <div class="otp-input">
+          <input type="number" maxlength="1" id="digit4" class="otp-digit" required>
+            <input type="number" maxlength="1" id="digit1" class="otp-digit" required>
+            <input type="number" maxlength="1" id="digit2" class="otp-digit" required>
+            <input type="number" maxlength="1" id="digit3" class="otp-digit" required>
+            <input type="number" maxlength="1" id="digit4" class="otp-digit" required>
+        </div>
+    </form>
+     </div>
+
+   <div class="otp_send_cont">
+    <div>Time remaing
+      <div id="countdown"></div>
+     </div>
+     <span>Resend OTP</span>
+   </div>
+    <button class="btn_default" onclick="verifyOPT()" >Verify OTP</button>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- modal otp -->
+
+
+
+
+
+<!-- success page -->
+<div id="success_otp" class="success_otp">
+  
+ <div class="success_otp_container">
+  <div class="card">
+    <div style="border-radius:200px; height:120px; width:120px; background: #f5f7fa; margin:0 auto; display: flex; align-items: center; justify-content: center;">
+      <i class="checkmark">✓</i>
+    </div>
+      <h1>Success</h1> 
+      <p>Your OTP has been successfully verified.</p>
+      <div>
+      <form>
+       <div>
+         <input class="newpass_otp" type="password" placeholder="New Password"/>
+         <i class="fa-solid fa-eye-slash"></i>
+        </div>
+        <button class="btn_default">OK</button>
+      </form>
+    </div>
+    </div>
+ </div>
+</div>
+<!-- success page -->
+
+
+
+
+
+
+
+
+
+
+<!-- loader -->
+  <div id="loading" class="container_load">
+    <div class="loading" >
+        <div class="custom-loader"></div>
+    </div>
+  </div>
+<!-- loader -->
+
+    <script src="main.js"></script>
+  </script>
+  </body>
+</html>
